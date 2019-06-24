@@ -1,6 +1,5 @@
 header {
-  $header-size: 700px;
-  $intro-position: -200px;
+  $header-size: $container-min-size;
 
   z-index: 1;
   background-image: -webkit-linear-gradient(0deg, #766dff 0%, #88f3ff 100%);
@@ -8,12 +7,12 @@ header {
 
   .intro {
     position: relative;
-    bottom: $intro-position;
+    bottom: -$intro-position;
     background: #ffffff;
     padding: 20px;
     border-radius: 12px;
     margin: 0 auto;
-    width: 85%;
+    width: $container-width;
 
     display: flex;
     flex-direction: row;
@@ -145,7 +144,7 @@ header {
           margin: 0 $margin;
 
           &:hover {
-            background-color: black;
+            background-color: #000000;
           }
 
           &:first-child {
@@ -258,7 +257,7 @@ header {
       }
 
       .intro__photo {
-        margin: 0;
+        margin: 0 auto;
         max-width: $header-size;
         max-height: $header-size;
       }

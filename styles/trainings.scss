@@ -1,0 +1,59 @@
+.trainings {
+  .trainings__title {
+    text-transform: uppercase;
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 0.8rem;
+    text-align: center;
+  }
+
+  .trainings__list {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+
+    @media only screen and (max-width: 600px) {
+      flex-direction: column;
+    }
+
+    .trainings__item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      flex-wrap: nowrap;
+      margin: 1.5rem 0;
+
+      &>a:nth-child(2) {
+        text-decoration: none;
+        color: black;
+        cursor: pointer;
+      }
+
+      @mixin logo($image-path, $height: 300px, $width: 300px) {
+        background-image: url($image-path);
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+        min-width: $width;
+        min-height: $height;
+        cursor: pointer;
+      }
+
+      .kotlin {
+        @include logo('./../assets/school-logo.svg', 120px);
+      }
+
+      .rss {
+        @include logo('./../assets/rss.svg');
+        background-position-x: -25px;
+      }
+
+      .mongo {
+        @include logo('./../assets/mongodb.svg', 120px);
+      }
+    }
+  }
+}

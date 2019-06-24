@@ -1,0 +1,25 @@
+.about {
+  margin: calc(#{$intro-position} + 5rem) auto 5rem;
+  width: $container-width;
+
+  .about__title {
+    text-transform: uppercase;
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 0.8rem;
+    text-align: center;
+  }
+
+  p.about__text {
+    color: #777777;
+  }
+
+  @media only screen and (max-width: 1200px) {
+    $intro-position: 5rem;
+    margin: calc(#{$intro-position} + 5rem) auto 5rem;
+  }
+
+  @media only screen and (max-width: 600px) {
+    margin: 5rem auto;
+  }
+}

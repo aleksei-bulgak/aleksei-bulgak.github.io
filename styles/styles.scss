@@ -1,7 +1,15 @@
+$container-min-size: 700px;
+$container-width: 85%;
+$intro-position: 200px;
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 body {
@@ -10,7 +18,24 @@ body {
   font-size: 16px;
 }
 
+section {
+  margin: 5rem auto;
+  width: $container-width;
+
+  @media only screen and (max-width: 1200px) {
+    margin: 5rem auto;
+    width: 75%;
+  }
+
+  @media only screen and (max-width: 600px) {
+    margin: 5rem auto;
+    width: 100%;
+  }
+}
+
 @import 'header.scss';
 @import 'navigation.scss';
+@import 'about.scss';
+@import 'trainings.scss';
 
 
