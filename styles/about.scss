@@ -3,11 +3,7 @@
   width: $container-width;
 
   .about__title {
-    text-transform: uppercase;
-    font-size: 2rem;
-    font-weight: bold;
-    margin-bottom: 0.8rem;
-    text-align: center;
+    @include title;
   }
 
   p.about__text {

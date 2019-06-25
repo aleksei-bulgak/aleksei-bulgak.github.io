@@ -173,7 +173,7 @@ header {
 
   @media only screen and (max-width: 1300px) {
     .intro {
-      $header-size: 600px;
+      $header-size: 500px;
       .intro__info {
         max-width: $header-size;
         max-height: $header-size;
@@ -189,7 +189,7 @@ header {
   @media only screen and (max-width: 1200px) {
     
     .intro {
-      $header-size: 600px;
+      $header-size: 500px;
       $intro-position: -5rem;
 
       flex-direction: column;
@@ -231,7 +231,7 @@ header {
     @media only screen and (max-width: 600px) {
     
     .intro {
-      $header-size: 600px;
+      $header-size: 500px;
       
       display: block;
       position: initial;
