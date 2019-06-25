@@ -1,9 +1,9 @@
-import "../styles/styles.scss";
+import '../styles/styles.scss';
 
-appendStyleWhenInViewPort(".trainings__item", "trainings__item--animated");
+appendStyleWhenInViewPort('.trainings__item', 'trainings__item--animated');
 
 function appendStyleWhenInViewPort(elementSelector, styleClass) {
-  window.addEventListener("scroll", () => {
+  window.addEventListener('scroll', () => {
     document.body
       .querySelectorAll(elementSelector)
       .forEach(e => {

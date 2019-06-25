@@ -12,7 +12,7 @@ header {
     padding: 20px;
     border-radius: 12px;
     margin: 0 auto;
-    width: $container-width;
+    width: 65%;
 
     display: flex;
     flex-direction: row;
@@ -192,7 +192,6 @@ header {
       $header-size: 500px;
       $intro-position: -5rem;
 
-      flex-direction: column;
       bottom: $intro-position;
       width: 75%;
       
@@ -216,7 +215,6 @@ header {
         &>*:last-child {
           padding: 0;
           margin-top: 3rem;
-          justify-content: center;
         }
       }
 
@@ -228,7 +226,19 @@ header {
     }
   }
 
-    @media only screen and (max-width: 600px) {
+  @media only screen and (max-width: 1000px) {
+    .intro {
+      flex-direction: column;
+
+      .intro__info {
+        &>*:last-child {
+          justify-content: center;
+        }
+      }
+    }
+  }
+
+  @media only screen and (max-width: 600px) {
     
     .intro {
       $header-size: 500px;
