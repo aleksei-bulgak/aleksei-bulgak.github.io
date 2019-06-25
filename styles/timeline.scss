@@ -1,0 +1,155 @@
+.experience {
+  width: 100%;
+  padding: 5rem;
+  background: -moz-linear-gradient(top, #bea2e7 0%, #86b7e7 100%);
+  background: -webkit-linear-gradient(top, #bea2e7 0%, #86b7e7 100%);
+  background: linear-gradient(to bottom, #bea2e7 0%, #86b7e7 100%);
+
+  .experience__title {
+    @include title;
+    box-sizing: border-box;
+  }
+
+  .experience__timeline {
+    position: relative;
+    margin: 0 auto;
+    width: 500px;
+    box-sizing: border-box;
+
+    &::before {
+      content: '';
+      width: 1px;
+      height: 100%;
+      position: absolute;
+      border-left: 2px dashed #fff;
+      box-sizing: border-box;
+    }
+
+    .experience__item {
+      position: relative;
+      left: 30px;
+      margin: 30px 0;
+      box-sizing: border-box;
+
+      .period {
+        left: -30px;
+        height: 100%;
+        position: absolute;
+        border-left: 2px solid #fff;
+        box-sizing: border-box;
+        color: #fff;
+
+        &::before {
+          content: '';
+          width: 8px;
+          height: 8px;
+          border-radius: 50%;
+          border: 2px solid #fff;
+          position: absolute;
+          background: #86b7e7;
+          left: -5px;
+          top: 0;
+          box-sizing: border-box;
+        }
+
+        &::after {
+          content: '';
+          width: 8px;
+          height: 8px;
+          border-radius: 50%;
+          border: 2px solid #fff;
+          position: absolute;
+          background: #86b7e7;
+          left: -5px;
+          bottom: 0;
+          box-sizing: border-box;
+        }
+
+        .period__start {
+          left: -100px;
+          bottom: -0.3rem;
+          line-height: 1rem;
+          font-size: 1rem;
+          position: absolute;
+        }
+
+        .period__end {
+          left: -100px;
+          top: -0.3rem;
+          line-height: 1rem;
+          font-size: 1rem;
+          position: absolute;
+        }
+      }
+
+      .description {
+        color: #3a3939;
+        position: relative;
+        background-color: rgba(255, 255, 255, 0.2);
+        padding: 14px;
+        border-radius: 6px;
+        box-shadow: 0 0 4px rgba(0, 0, 0, 0.12), 0 2px 2px rgba(0, 0, 0, 0.08);
+
+        .descripton__ship {
+          margin-bottom: 1rem;
+
+          a {
+            text-decoration: none;
+            cursor: pointer;
+            color: inherit;
+          }
+        }
+
+        .descripton__project {
+          margin: 0.5rem 0;
+
+          p {
+            margin: 0.2rem 0;
+          }
+        }
+      }
+    }
+
+    @media only screen and (max-width: 750px) {
+      width: 100%;
+      &::before {
+        display: none;
+      }
+
+      .experience__item {
+        position: initial;
+        .period {
+          position: initial;
+          height: auto;
+          border: 0;
+          color: #3a3939;
+          margin-bottom: 14px;
+
+          &::before,
+          &::after {
+            display: none;
+          }
+
+          .period__start {
+            position: initial;
+
+            &::before {
+              content: "Started: "
+            }
+          }
+
+          .period__end {
+            position: initial;
+            &::before {
+              content: "Finished: "
+            }
+          }
+        }
+      }
+    }
+  }
+
+  @media only screen and (max-width: 750px) {
+    padding: 1rem;
+  }
+}
