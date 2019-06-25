@@ -58,7 +58,6 @@ header {
 @keyframes easter-egg {
   0% {
     transform: rotateY(90deg); }
-  50% { }
   100% {
     transform: rotateY(0deg); } }
       header .intro .intro__photo.egg {
@@ -331,6 +330,121 @@ header {
   @media only screen and (max-width: 600px) {
     .about {
       margin: 5rem auto; } }
+
+.experience {
+  width: 100%;
+  padding: 5rem;
+  background: -moz-linear-gradient(top, #bea2e7 0%, #86b7e7 100%);
+  background: -webkit-linear-gradient(top, #bea2e7 0%, #86b7e7 100%);
+  background: linear-gradient(to bottom, #bea2e7 0%, #86b7e7 100%); }
+  .experience .experience__title {
+    text-transform: uppercase;
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 0.8rem;
+    text-align: center;
+    box-sizing: border-box; }
+  .experience .experience__timeline {
+    position: relative;
+    margin: 0 auto;
+    width: 500px;
+    box-sizing: border-box; }
+    .experience .experience__timeline::before {
+      content: '';
+      width: 1px;
+      height: 100%;
+      position: absolute;
+      border-left: 2px dashed #fff;
+      box-sizing: border-box; }
+    .experience .experience__timeline .experience__item {
+      position: relative;
+      left: 30px;
+      margin: 30px 0;
+      box-sizing: border-box; }
+      .experience .experience__timeline .experience__item .period {
+        left: -30px;
+        height: 100%;
+        position: absolute;
+        border-left: 2px solid #fff;
+        box-sizing: border-box;
+        color: #fff; }
+        .experience .experience__timeline .experience__item .period::before {
+          content: '';
+          width: 8px;
+          height: 8px;
+          border-radius: 50%;
+          border: 2px solid #fff;
+          position: absolute;
+          background: #86b7e7;
+          left: -5px;
+          top: 0;
+          box-sizing: border-box; }
+        .experience .experience__timeline .experience__item .period::after {
+          content: '';
+          width: 8px;
+          height: 8px;
+          border-radius: 50%;
+          border: 2px solid #fff;
+          position: absolute;
+          background: #86b7e7;
+          left: -5px;
+          bottom: 0;
+          box-sizing: border-box; }
+        .experience .experience__timeline .experience__item .period .period__start {
+          left: -100px;
+          bottom: -0.3rem;
+          line-height: 1rem;
+          font-size: 1rem;
+          position: absolute; }
+        .experience .experience__timeline .experience__item .period .period__end {
+          left: -100px;
+          top: -0.3rem;
+          line-height: 1rem;
+          font-size: 1rem;
+          position: absolute; }
+      .experience .experience__timeline .experience__item .description {
+        color: #3a3939;
+        position: relative;
+        background-color: rgba(255, 255, 255, 0.2);
+        padding: 14px;
+        border-radius: 6px;
+        box-shadow: 0 0 4px rgba(0, 0, 0, 0.12), 0 2px 2px rgba(0, 0, 0, 0.08); }
+        .experience .experience__timeline .experience__item .description .descripton__ship {
+          margin-bottom: 1rem; }
+          .experience .experience__timeline .experience__item .description .descripton__ship a {
+            text-decoration: none;
+            cursor: pointer;
+            color: inherit; }
+        .experience .experience__timeline .experience__item .description .descripton__project {
+          margin: 0.5rem 0; }
+          .experience .experience__timeline .experience__item .description .descripton__project p {
+            margin: 0.2rem 0; }
+    @media only screen and (max-width: 750px) {
+      .experience .experience__timeline {
+        width: 100%; }
+        .experience .experience__timeline::before {
+          display: none; }
+        .experience .experience__timeline .experience__item {
+          position: initial; }
+          .experience .experience__timeline .experience__item .period {
+            position: initial;
+            height: auto;
+            border: 0;
+            color: #3a3939;
+            margin-bottom: 14px; }
+            .experience .experience__timeline .experience__item .period::before, .experience .experience__timeline .experience__item .period::after {
+              display: none; }
+            .experience .experience__timeline .experience__item .period .period__start {
+              position: initial; }
+              .experience .experience__timeline .experience__item .period .period__start::before {
+                content: "Started: "; }
+            .experience .experience__timeline .experience__item .period .period__end {
+              position: initial; }
+              .experience .experience__timeline .experience__item .period .period__end::before {
+                content: "Finished: "; } }
+  @media only screen and (max-width: 750px) {
+    .experience {
+      padding: 1rem; } }
 
 .trainings .trainings__title {
   text-transform: uppercase;
