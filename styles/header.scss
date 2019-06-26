@@ -2,7 +2,9 @@ header {
   $header-size: $container-min-size;
 
   z-index: 1;
-  background-image: -webkit-linear-gradient(0deg, #766dff 0%, #88f3ff 100%);
+  background: -moz-linear-gradient(top, #bea2e7 0%, #86b7e7 100%);
+  background: -webkit-linear-gradient(top, #bea2e7 0%, #86b7e7 100%);
+  background: linear-gradient(to bottom, #bea2e7 0%, #86b7e7 100%);
   min-height: $header-size;
 
   .intro {
@@ -185,6 +187,10 @@ header {
 
         .github {
           @include social-network('./../assets/github-brands.svg');
+        }
+
+        .resume {
+          @include social-network('./../assets/file-pdf-regular.svg');
         }
       }
     }
