@@ -1,7 +1,14 @@
+/* eslint-disable no-undef */
 import '../styles/styles.scss';
 
-appendStyleWhenInViewPort('.trainings__item', 'trainings__item--animated');
-easterEgg();
+function isInViewPort(element) {
+  const bounding = element.getBoundingClientRect();
+  if ((bounding.bottom + bounding.top) / 2.5 < (window.innerHeight || document.documentElement.clientHeight)) {
+    return true;
+  }
+
+  return false;
+}
 
 function appendStyleWhenInViewPort(elementSelector, styleClass) {
   window.addEventListener('scroll', () => {
@@ -11,15 +18,6 @@ function appendStyleWhenInViewPort(elementSelector, styleClass) {
       }
     });
   });
-}
-
-function isInViewPort(element) {
-  const bounding = element.getBoundingClientRect();
-  if ((bounding.bottom + bounding.top) / 2.5 < (window.innerHeight || document.documentElement.clientHeight)) {
-    return true;
-  }
-
-  return false;
 }
 
 function easterEgg() {
@@ -33,3 +31,6 @@ function easterEgg() {
     }
   });
 }
+
+appendStyleWhenInViewPort('.trainings__item', 'trainings__item--animated');
+easterEgg();

@@ -8,6 +8,8 @@ branches:
     - master
 jobs:
   include:
+    - stage: lint
+      script: npm run lint
     - stage: build
       script: npm run build
 
