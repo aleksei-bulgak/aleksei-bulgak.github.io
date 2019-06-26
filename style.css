@@ -37,7 +37,7 @@ header {
     bottom: -200px;
     background: #ffffff;
     padding: 20px;
-    border-radius: 12px;
+    border-radius: 6px;
     margin: 0 auto;
     width: 65%;
     display: flex;
@@ -51,8 +51,9 @@ header {
       max-width: 500px;
       max-height: 500px;
       overflow: hidden;
-      border-radius: 10px;
-      margin-right: 5%; }
+      border-radius: 6px;
+      margin-right: 5%;
+      box-shadow: 4px 6px 34px -4px #99939980; }
       header .intro .intro__photo > img {
         width: 100%;
         height: 100%; }
