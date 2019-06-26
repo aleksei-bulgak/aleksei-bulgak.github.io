@@ -28,7 +28,9 @@ section {
 
 header {
   z-index: 1;
-  background-image: -webkit-linear-gradient(0deg, #766dff 0%, #88f3ff 100%);
+  background: -moz-linear-gradient(top, #bea2e7 0%, #86b7e7 100%);
+  background: -webkit-linear-gradient(top, #bea2e7 0%, #86b7e7 100%);
+  background: linear-gradient(to bottom, #bea2e7 0%, #86b7e7 100%);
   min-height: 500px; }
   header .intro {
     position: relative;
@@ -217,6 +219,22 @@ header {
           header .intro .intro__info .info__social .github:first-child {
             margin-left: 0; }
           header .intro .intro__info .info__social .github:last-child {
+            margin-right: 0; }
+        header .intro .intro__info .info__social .resume {
+          mask: url(data:image/svg+xml;base64,PHN2ZyBhcmlhLWhpZGRlbj0idHJ1ZSIgZm9jdXNhYmxlPSJmYWxzZSIgZGF0YS1wcmVmaXg9ImZhciIgZGF0YS1pY29uPSJmaWxlLXBkZiIgY2xhc3M9InN2Zy1pbmxpbmUtLWZhIGZhLWZpbGUtcGRmIGZhLXctMTIiIHJvbGU9ImltZyIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB2aWV3Qm94PSIwIDAgMzg0IDUxMiI+PHBhdGggZmlsbD0iY3VycmVudENvbG9yIiBkPSJNMzY5LjkgOTcuOUwyODYgMTRDMjc3IDUgMjY0LjgtLjEgMjUyLjEtLjFINDhDMjEuNSAwIDAgMjEuNSAwIDQ4djQxNmMwIDI2LjUgMjEuNSA0OCA0OCA0OGgyODhjMjYuNSAwIDQ4LTIxLjUgNDgtNDhWMTMxLjljMC0xMi43LTUuMS0yNS0xNC4xLTM0ek0zMzIuMSAxMjhIMjU2VjUxLjlsNzYuMSA3Ni4xek00OCA0NjRWNDhoMTYwdjEwNGMwIDEzLjMgMTAuNyAyNCAyNCAyNGgxMDR2Mjg4SDQ4em0yNTAuMi0xNDMuN2MtMTIuMi0xMi00Ny04LjctNjQuNC02LjUtMTcuMi0xMC41LTI4LjctMjUtMzYuOC00Ni4zIDMuOS0xNi4xIDEwLjEtNDAuNiA1LjQtNTYtNC4yLTI2LjItMzcuOC0yMy42LTQyLjYtNS45LTQuNCAxNi4xLS40IDM4LjUgNyA2Ny4xLTEwIDIzLjktMjQuOSA1Ni0zNS40IDc0LjQtMjAgMTAuMy00NyAyNi4yLTUxIDQ2LjItMy4zIDE1LjggMjYgNTUuMiA3Ni4xLTMxLjIgMjIuNC03LjQgNDYuOC0xNi41IDY4LjQtMjAuMSAxOC45IDEwLjIgNDEgMTcgNTUuOCAxNyAyNS41IDAgMjgtMjguMiAxNy41LTM4Ljd6bS0xOTguMSA3Ny44YzUuMS0xMy43IDI0LjUtMjkuNSAzMC40LTM1LTE5IDMwLjMtMzAuNCAzNS43LTMwLjQgMzV6bTgxLjYtMTkwLjZjNy40IDAgNi43IDMyLjEgMS44IDQwLjgtNC40LTEzLjktNC4zLTQwLjgtMS44LTQwLjh6bS0yNC40IDEzNi42YzkuNy0xNi45IDE4LTM3IDI0LjctNTQuNyA4LjMgMTUuMSAxOC45IDI3LjIgMzAuMSAzNS41LTIwLjggNC4zLTM4LjkgMTMuMS01NC44IDE5LjJ6bTEzMS42LTVzLTUgNi0zNy4zLTcuOGMzNS4xLTIuNiA0MC45IDUuNCAzNy4zIDcuOHoiPjwvcGF0aD48L3N2Zz4=);
+          -webkit-mask: url(data:image/svg+xml;base64,PHN2ZyBhcmlhLWhpZGRlbj0idHJ1ZSIgZm9jdXNhYmxlPSJmYWxzZSIgZGF0YS1wcmVmaXg9ImZhciIgZGF0YS1pY29uPSJmaWxlLXBkZiIgY2xhc3M9InN2Zy1pbmxpbmUtLWZhIGZhLWZpbGUtcGRmIGZhLXctMTIiIHJvbGU9ImltZyIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB2aWV3Qm94PSIwIDAgMzg0IDUxMiI+PHBhdGggZmlsbD0iY3VycmVudENvbG9yIiBkPSJNMzY5LjkgOTcuOUwyODYgMTRDMjc3IDUgMjY0LjgtLjEgMjUyLjEtLjFINDhDMjEuNSAwIDAgMjEuNSAwIDQ4djQxNmMwIDI2LjUgMjEuNSA0OCA0OCA0OGgyODhjMjYuNSAwIDQ4LTIxLjUgNDgtNDhWMTMxLjljMC0xMi43LTUuMS0yNS0xNC4xLTM0ek0zMzIuMSAxMjhIMjU2VjUxLjlsNzYuMSA3Ni4xek00OCA0NjRWNDhoMTYwdjEwNGMwIDEzLjMgMTAuNyAyNCAyNCAyNGgxMDR2Mjg4SDQ4em0yNTAuMi0xNDMuN2MtMTIuMi0xMi00Ny04LjctNjQuNC02LjUtMTcuMi0xMC41LTI4LjctMjUtMzYuOC00Ni4zIDMuOS0xNi4xIDEwLjEtNDAuNiA1LjQtNTYtNC4yLTI2LjItMzcuOC0yMy42LTQyLjYtNS45LTQuNCAxNi4xLS40IDM4LjUgNyA2Ny4xLTEwIDIzLjktMjQuOSA1Ni0zNS40IDc0LjQtMjAgMTAuMy00NyAyNi4yLTUxIDQ2LjItMy4zIDE1LjggMjYgNTUuMiA3Ni4xLTMxLjIgMjIuNC03LjQgNDYuOC0xNi41IDY4LjQtMjAuMSAxOC45IDEwLjIgNDEgMTcgNTUuOCAxNyAyNS41IDAgMjgtMjguMiAxNy41LTM4Ljd6bS0xOTguMSA3Ny44YzUuMS0xMy43IDI0LjUtMjkuNSAzMC40LTM1LTE5IDMwLjMtMzAuNCAzNS43LTMwLjQgMzV6bTgxLjYtMTkwLjZjNy40IDAgNi43IDMyLjEgMS44IDQwLjgtNC40LTEzLjktNC4zLTQwLjgtMS44LTQwLjh6bS0yNC40IDEzNi42YzkuNy0xNi45IDE4LTM3IDI0LjctNTQuNyA4LjMgMTUuMSAxOC45IDI3LjIgMzAuMSAzNS41LTIwLjggNC4zLTM4LjkgMTMuMS01NC44IDE5LjJ6bTEzMS42LTVzLTUgNi0zNy4zLTcuOGMzNS4xLTIuNiA0MC45IDUuNCAzNy4zIDcuOHoiPjwvcGF0aD48L3N2Zz4=);
+          mask-repeat: no-repeat;
+          -webkit-mask-repeat: no-repeat;
+          background-color: #777777;
+          background-repeat: no-repeat;
+          width: 2rem;
+          height: 2rem;
+          margin: 0 1rem; }
+          header .intro .intro__info .info__social .resume:hover {
+            background-color: #000000; }
+          header .intro .intro__info .info__social .resume:first-child {
+            margin-left: 0; }
+          header .intro .intro__info .info__social .resume:last-child {
             margin-right: 0; }
   @media only screen and (max-width: 1300px) {
     header .intro .intro__info {
