@@ -1,6 +1,7 @@
 .about {
-  margin: calc(#{$intro-position} + 5rem) auto 5rem;
+  margin: $intro-position auto 5rem;
   width: $container-width;
+  padding-top: 5rem;
 
   .about__title {
     @include title;
@@ -12,7 +13,13 @@
 
   @media only screen and (max-width: 1200px) {
     $intro-position: 5rem;
-    margin: calc(#{$intro-position} + 5rem) auto 5rem;
+    margin: $intro-position auto;
+    padding: 0;
+  }
+
+  @media only screen and (max-width: 1000px) {
+    $intro-position: 5rem;
+    margin: calc(#{$intro-position} + 5rem) auto $intro-position;
   }
 
   @media only screen and (max-width: 600px) {
