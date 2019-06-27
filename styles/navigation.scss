@@ -5,17 +5,25 @@
   top: 0;
   left: 0;
   right: 0;
-  background-color: #0000004d;
+  // ie and edge does not supprt other formats with opacity
+  background-color: hsla(0, 0%, 0%, 0.302);
   z-index: 2;
 
   .navigation__list {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    justify-content: space-evenly;
+    // hack for ie and edge cause they does not support space-evenly
+    justify-content: space-between;
     align-items: center;
     height: 4rem;
     color: #ffffff;
+
+    // hack for ie and edge cause they does not support space-evenly
+    &::before, &::after {
+      content: '';
+      display: block;
+    }
 
     .navigation__item {
       position: relative;

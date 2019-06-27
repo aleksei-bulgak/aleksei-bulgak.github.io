@@ -6,9 +6,16 @@
   .trainings__list {
     display: flex;
     flex-direction: row;
-    justify-content: space-evenly;
+    // hack for ie and edge cause they does not support space-evenly
+    justify-content: space-around;
     align-items: center;
     flex-wrap: wrap;
+
+    // hack for ie and edge cause they does not support space-evenly
+    &::before, &::after {
+      content: '';
+      display: block;
+    }
 
     @media only screen and (max-width: 600px) {
       flex-direction: column;
