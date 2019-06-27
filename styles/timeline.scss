@@ -110,13 +110,14 @@
               transform: translate(-40px, -15px);
             }
             40% {
-              transform: translate(-55px, -15px)
+              transform: translate(-55px, -12px)
             }
             50% {
+              opacity: 1;
               transform: translate(-75px, -5px);
             }
             65%{
-              opacity: 0.6;
+
               transform: translate(-95px, -8px);
             }
             75% {
@@ -125,7 +126,7 @@
             }
             100% {
               opacity: 0;
-              transform: translate(-135px, 0px);
+              transform: translate(-135px, 0px) scale(20);
             }
           }
 
@@ -141,7 +142,7 @@
             display: inline;
             position: absolute;
             opacity: 0;
-            animation: ship 8s linear;
+            animation: ship 8s cubic-bezier( 0.36, 0.45, 0.63, 0.53);
           }
         }
 
