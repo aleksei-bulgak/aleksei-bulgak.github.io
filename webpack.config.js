@@ -12,7 +12,11 @@ module.exports = {
     filename: '[name].bundle.[hash].js'
   },
   optimization: {
-    minimizer: [new OptimizeCSSAssetsPlugin({})]
+    minimizer: [new OptimizeCSSAssetsPlugin({})],
+    splitChunks: {
+      chunks: 'all',
+      minSize: 30000
+    }
   },
   module: {
     rules: [
