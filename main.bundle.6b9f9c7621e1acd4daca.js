@@ -95,26 +95,21 @@ __webpack_require__.r(__webpack_exports__);
 /* eslint-disable no-undef */
 
 
-function isInViewPort(element) {
-  const bounding = element.getBoundingClientRect();
-  if ((bounding.bottom + bounding.top) / 2.5 < (window.innerHeight || document.documentElement.clientHeight)) {
-    return true;
-  }
-
-  return false;
-}
-
-function appendStyleWhenInViewPort(elementSelector, styleClass) {
-  window.addEventListener('scroll', () => {
-    document.body.querySelectorAll(elementSelector).forEach(e => {
-      if (isInViewPort(e) && !e.classList.contains(styleClass)) {
-        e.classList.add(styleClass);
-      }
+const options = {
+  threshold: 0.5
+};
+const intersectionObserver = new IntersectionObserver(elements => {
+  elements
+    .filter(e => e.isIntersecting)
+    .forEach(e => {
+      e.target.classList.add('trainings__item--animated');
+      intersectionObserver.unobserve(e.target);
     });
-  });
-}
+}, options);
 
-appendStyleWhenInViewPort('.trainings__item', 'trainings__item--animated');
+[...document.querySelectorAll('.trainings__item')].forEach(elem => {
+  intersectionObserver.observe(elem);
+});
 
 
 /***/ }),
