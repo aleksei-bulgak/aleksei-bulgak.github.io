@@ -28,6 +28,7 @@
       justify-content: center;
       flex-wrap: nowrap;
       margin: 1.5rem 0;
+      visibility: hidden;
 
       &>a:nth-child(2) {
         text-decoration: none;
@@ -124,6 +125,7 @@
 
       &.trainings__item--animated {
         animation: trainings 1s ease-in;
+        visibility: visible;
       }
     }
   }
