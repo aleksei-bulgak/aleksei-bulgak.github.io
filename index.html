@@ -4,9 +4,11 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <meta property="og:type" content="profile">
+    <meta property="og:url" content="https://aleksei-bulgak.github.io">
     <meta property="og:title" content="Aleksei Bulgak CV"/>
     <meta property="og:image" content="./assets/photo.jpg"/>
-    <meta property="og:description" name="Description" content="A qualified Java developer with 5 years of commercial experience in software engineering. On my current progect
+    <meta property="og:description" name="description" content="A qualified Java developer with 5 years of commercial experience in software engineering. On my current progect
         I have some experience in development microservice architecture, support old monotlitic application, hands-on
         experience in AWS infrastructure. I am seeking for the position that utilizes my technical skills and provides
         professional development."/>
@@ -27,13 +29,13 @@
       </ul>
     </nav>
     <header id="intro">
-      <div class="intro">
+      <div class="intro" itemscope itemtype="http://schema.org/Person">
         <div class="intro__photo">
-          <img src="./assets/photo.jpg" width="500" height="500" alt="Me" />
+          <img src="./assets/photo.jpg" width="500" height="500" alt="Me" itemprop="image"/>
         </div>
         <div class="info intro__info">
           <div class="info__base">
-            <h1 class="info__username">Aleksei Bulgak</h1>
+            <h1 class="info__username" itemprop="name">Aleksei Bulgak</h1>
             <p class="info__position">Java Developer</p>
           </div>
           <div class="info__contacts">
@@ -41,7 +43,7 @@
             <a href="tel:+375292032246" target="_blank" rel="nofollow noreferrer" class="info__phone" aria-label="my mobile phone">
               +375(29) 203-22-46
             </a>
-            <a href="mailto:aleksei.bulgak@gmail.com" target="_blank" rel="nofollow noreferrer" class="info__email" aria-label="my email address">
+            <a href="mailto:aleksei.bulgak@gmail.com" target="_blank" rel="nofollow noreferrer" class="info__email" aria-label="my email address" itemprop="email">
               aleksei.bulgak@gmail.com
             </a>
           </div>
