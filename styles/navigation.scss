@@ -40,6 +40,10 @@
 
       a {
         color: #ffffff;
+        min-height: $min-element-height-on-mobile;
+        line-height: $min-element-height-on-mobile;
+        display: inline-block;
+        font-weight: bold;
       }
     }
   }
