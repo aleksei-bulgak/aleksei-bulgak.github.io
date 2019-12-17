@@ -4,6 +4,22 @@ import '../styles/styles.scss';
 const options = {
   threshold: 0.5
 };
+
+const intersectionObserverHide = new IntersectionObserver(
+  elements => {
+    elements
+      .filter(e => e.isIntersecting)
+      .forEach(e => {
+        e.target.classList.remove('trainings__item--animated');
+        intersectionObserverHide.unobserve(e.target);
+      });
+  },
+  {
+    rootMargin: '200px',
+    threshold: 0
+  }
+);
+
 const intersectionObserver = new IntersectionObserver(elements => {
   elements
     .filter(e => e.isIntersecting)
@@ -13,18 +29,6 @@ const intersectionObserver = new IntersectionObserver(elements => {
       intersectionObserverHide.unobserve(e.target);
     });
 }, options);
-
-const intersectionObserverHide = new IntersectionObserver(elements => {
-  elements
-    .filter(e => e.isIntersecting)
-    .forEach(e => {
-      e.target.classList.remove('trainings__item--animated');
-      intersectionObserverHide.unobserve(e.target);
-    });
-}, {
-  rootMargin: '200px',
-  threshold: 0
-});
 
 [...document.querySelectorAll('.trainings__item')].forEach(elem => {
   intersectionObserverHide.observe(elem);
