@@ -14,27 +14,23 @@ footer {
     margin-top: 0.5rem;
 
     .social-network {
-      background-color: #777777;
       background-repeat: no-repeat;
+      background-position: center;
       cursor: pointer;
       width: 1.2rem;
       height: 1.2rem;
       margin: 0.5rem;
       &:hover {
-        background-color: white;
+        filter: brightness(200%);
       }
     }
 
     .vk {
-      mask: url('./../assets/vk-brands.svg');
-      mask-repeat: no-repeat;
-      mask-position: center;
+      background: url('./../assets/vk-brands.svg');
     }
 
     .twitter {
-      mask: url('./../assets/twitter-brands.svg');
-      mask-repeat: no-repeat;
-      mask-position: center;
+      background: url('./../assets/twitter-brands.svg');
     }
   }
 }

@@ -94,9 +94,7 @@ header {
           content: '';
           position: absolute;
           left: calc(-#{$into-icon-margin});
-          mask: $logo;
-          mask-repeat: no-repeat;
-          background-color: $text-color;
+          background: $logo;
           background-repeat: no-repeat;
           width: $text-size;
           height: $text-size;
@@ -107,7 +105,7 @@ header {
         }
 
         &:hover::before {
-          background-color: black;
+          filter: brightness(20%);
         }
       }
 
@@ -139,16 +137,14 @@ header {
         $icon-size: 2rem;
 
         @mixin social-network($image, $margin: 1rem, $color: $intro-color) {
-          mask: url($image);
-          mask-repeat: no-repeat;
-          background-color: $color;
+          background: url($image);
           background-repeat: no-repeat;
           width: $icon-size;
           height: $icon-size;
           margin: 0 $margin;
 
           &:hover {
-            background-color: #000000;
+            filter: brightness(20%);
           }
 
           &:first-child {
