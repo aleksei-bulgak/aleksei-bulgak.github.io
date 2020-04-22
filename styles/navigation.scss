@@ -1,3 +1,5 @@
+$min-width-to-show-hamburger: 600px;
+
 .navigation {
   position: fixed;
   display: block;
@@ -20,7 +22,8 @@
     color: #ffffff;
 
     // hack for ie and edge cause they does not support space-evenly
-    &::before, &::after {
+    &::before,
+    &::after {
       content: '';
       display: block;
     }
@@ -48,14 +51,82 @@
     }
   }
 
+  .navigation__hamburger {
+    display: inline;
+    position: fixed;
+    left: 1rem;
+    top: 1rem;
+    opacity: 0;
+    transition: opacity 0.5s linear;
+
+    .hamburger {
+      display: inline-block;
+      position: fixed;
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      background-color: #505050;
+      border: none;
+      color: #505050;
+      z-index: 1000;
+      cursor: pointer;
+
+      &::before {
+        content: '';
+        display: block;
+        position: absolute;
+        top: 30%;
+        left: 25%;
+        width: 50%;
+        height: 4px;
+        background-color: white;
+        transition: transform 0.3s linear;
+      }
+
+      &::after {
+        content: '';
+        display: block;
+        position: absolute;
+        bottom: 30%;
+        left: 25%;
+        width: 50%;
+        height: 4px;
+        background-color: white;
+        transition: transform 0.3s linear;
+      }
+    }
+
+    @media only screen and (max-width: $min-width-to-show-hamburger) {
+    }
+  }
+
   @media only screen and (max-width: 600px) {
-    position: initial;
+    transition: left 0.5s ease-in-out;
+    left: -120%;
+
+    &.active {
+      left: 0;
+
+      .navigation__hamburger > .hamburger {
+        &::before {
+          transform: translateY(150%) rotate(45deg);
+        }
+
+        &::after {
+          transform: translateY(-150%) rotate(-45deg);
+        }
+      }
+    }
 
     .navigation__list {
       flex-direction: column;
       height: initial;
       padding: 1rem 0;
-      background-color: hsla(0, 0%, 0%, 0.5);
+      background-color: #00000080;
+    }
+
+    .navigation__hamburger {
+      opacity: 1;
     }
   }
 }
