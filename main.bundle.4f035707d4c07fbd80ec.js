@@ -129,6 +129,12 @@ const intersectionObserver = new IntersectionObserver(elements => {
   intersectionObserver.observe(elem);
 });
 
+document.querySelector('.navigation').addEventListener('click', e => {
+  if (e.target.classList.contains('navigation-action')) {
+    e.currentTarget.classList.toggle('active');
+  }
+});
+
 
 /***/ }),
 /* 1 */
