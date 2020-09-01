@@ -100,6 +100,13 @@
         }
       }
 
+      .aws {
+        @include logo('./../assets/AWS-Developer-Associate.png', 120px);
+
+        &:hover {
+          animation: flip-x 1.5s ease-in-out;
+        }
+      }
       
       @keyframes trainings {
         0% {
