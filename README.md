@@ -1,6 +1,6 @@
 # My personal page
 
-[![Build Status](https://travis-ci.org/aleksei-bulgak/aleksei-bulgak.github.io.svg?branch=develop)](https://travis-ci.org/aleksei-bulgak/aleksei-bulgak.github.io)
+[![Build Status](https://travis-ci.com/aleksei-bulgak/aleksei-bulgak.github.io.svg?branch=develop)](https://travis-ci.com/aleksei-bulgak/aleksei-bulgak.github.io)
 
 ### This application is written in pure js/css/html with the help of:
 * Webpack - bundler/build tool
